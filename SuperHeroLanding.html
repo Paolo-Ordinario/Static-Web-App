@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Super Hero Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class = "navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class = "container">
+            <a class = "navbar-brand" href="SuperHeroLanding.html">Super Hero Landing Page</a>
+            <div class = "navbar-nav">
+                <a class = "nav-link" href = "SuperHeroLanding.html">Home</a>
+                <a class = "nav-link" href = "details.html">Details</a>
+                <a class = "nav-link" href = "about.html">About</a>
+                <a class = "nav-link" href = "NewHeroForm.html">Add a Hero</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class = "container">
+        <h1 class = "text-center mb-4">Superhero Gallery</h1>
+
+        <input type = "text" id = "searchInput" class = "form-control mb-4" placeholder = "Search for a superhero...">
+        <div class = "row" id = "heroList">
+            <div class = "col-md-4 mb-4 hero-card">
+            <div class = "card">
+                <div class = "card-body">
+                    <h5 class = "card-title">Sub Sonic</h5>
+                        <img src = "Image/Sub_Sonic.png" class = "card-img-top" alt = "Superhero Image">
+                    <p class = "card-text">Protecting Region: Northern Hemisphere | Hero Group: Speedsters | Power: Super Speed, Sonic Voice</p>
+                    <a href = "details.html" class = "btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class = "col-md-4 mb-4 hero-card">
+            <div class = "card">
+            <div class = "card-body">
+                <h5 class = "card-title">Aqua Beast</h5>
+                <img src = "Image/Aqua_Beast.png" class = "card-img-top" alt = "Superhero Image">
+                <p class = "card-text">Protecting Region: Coastal Cities | Hero Group: Elementalists | Power: Water Manipulation, Aquatic Communication, Aquatic Transformation, Water Breathing</p>
+                <a href = "details.html" class = "btn btn-primary">View Details</a>
+            </div>
+        </div>
+        </div>
+
+        <div class = "col-md-4 mb-4 hero-card">
+            <div class = "card">
+            <div class = "card-body">
+                <h5 class = "card-title">Shadow Boom</h5>
+                <img src = "Image/Shadow_Boom.png" class = "card-img-top" alt = "Superhero Image">
+                <p class = "card-text">Protecting Region: Northern Hemisphere | Hero Group: Speedsters | Power: Shadow Manipulation, Super Speed</p>
+                <a href = "details.html" class = "btn btn-primary">View Details</a>
+            </div>
+        </div>
+        </div>
+
+        <div class = "col-md-4 mb-4 hero-card">
+            <div class = "card">
+            <div class = "card-body">
+                <h5 class = "card-title">Thunder Strike</h5>
+                <img src = "Image/Thunder_Strike.png" class = "card-img-top" alt = "Superhero Image">
+                <p class = "card-text">Protecting Region: Global | Hero Group: Elementalists | Power: Lightning Manipulation, Flight</p>
+                <a href = "details.html" class = "btn btn-primary">View Details</a>
+            </div>
+        </div>
+        </div>
+
+        <div class = "col-md-4 mb-4 hero-card">
+            <div class = "card">
+            <div class = "card-body">
+                <h5 class = "card-title">Gallexus</h5>
+                <img src = "Image/Gallexus.png" class = "card-img-top" alt = "Superhero Image">
+                <p class = "card-text">Protecting Region: Universe | Hero Group: 5 Pillars | Power: Super Strength, Super Speed,Super Durability, Flight, Super Senses, Enhanced Intelligence</p>
+                <a href = "details.html" class = "btn btn-primary">View Details</a>
+            </div>
+        </div>
+        </div>
+    </div>
+        
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const cards = document.querySelectorAll(".hero-card");
+
+        searchInput.addEventListener("keyup", () => {
+            const value = searchInput.value.toLowerCase();
+            cards.forEach(card => {
+                card.style.display = card.innerText.toLowerCase().includes(value) ? "" : "none";
+            })
+        })
+    </script>
+</body>
+</html>
